@@ -1,8 +1,8 @@
 <?php 
 define('USE_FETCH_FOR_REQUESTS',true);
 ?><?php 
-define('WP_HOME','https://diy-pwa.com/scope:0.3492293844529037');
-define('WP_SITEURL','https://diy-pwa.com/scope:0.3492293844529037');
+define('WP_HOME','https://diy-pwa.com/scope:0.5294684776307093');
+define('WP_SITEURL','https://diy-pwa.com/scope:0.5294684776307093');
 ?><?php define( 'CONCATENATE_SCRIPTS', false );
 /**
  * The base configuration for WordPress

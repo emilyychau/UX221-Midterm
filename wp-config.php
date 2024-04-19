@@ -1,6 +1,8 @@
 <?php 
-define('WP_HOME','https://playground.wordpress.net/scope:0.4802781607400362');
-define('WP_SITEURL','https://playground.wordpress.net/scope:0.4802781607400362');
+define('USE_FETCH_FOR_REQUESTS',true);
+?><?php 
+define('WP_HOME','https://diy-pwa.com/scope:0.3492293844529037');
+define('WP_SITEURL','https://diy-pwa.com/scope:0.3492293844529037');
 ?><?php define( 'CONCATENATE_SCRIPTS', false );
 /**
  * The base configuration for WordPress

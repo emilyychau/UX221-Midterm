@@ -1,0 +1,3 @@
+<?php
+ #[AllowDynamicProperties]
+ class WP_MatchesMapRegex { private $_matches; public $output; private $_subject; public $_pattern = '(\$matches\[[1-9]+[0-9]*\])'; public function __construct( $subject, $matches ) { $this->_subject = $subject; $this->_matches = $matches; $this->output = $this->_map(); } public static function apply( $subject, $matches ) { $result = new WP_MatchesMapRegex( $subject, $matches ); return $result->output; } private function _map() { $callback = array( $this, 'callback' ); return preg_replace_callback( $this->_pattern, $callback, $this->_subject ); } public function callback( $matches ) { $index = (int) substr( $matches[0], 9, -1 ); return ( isset( $this->_matches[ $index ] ) ? urlencode( $this->_matches[ $index ] ) : '' ); } } 

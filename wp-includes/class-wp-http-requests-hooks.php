@@ -1,0 +1,3 @@
+<?php
+ #[AllowDynamicProperties]
+ class WP_HTTP_Requests_Hooks extends WpOrg\Requests\Hooks { protected $url; protected $request = array(); public function __construct( $url, $request ) { $this->url = $url; $this->request = $request; } public function dispatch( $hook, $parameters = array() ) { $result = parent::dispatch( $hook, $parameters ); switch ( $hook ) { case 'curl.before_send': do_action_ref_array( 'http_api_curl', array( &$parameters[0], $this->request, $this->url ) ); break; } do_action_ref_array( "requests-{$hook}", $parameters, $this->request, $this->url ); return $result; } } 

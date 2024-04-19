@@ -1,0 +1,2 @@
+<?php
+ class WP_Block_Parser_Block { public $blockName; public $attrs; public $innerBlocks; public $innerHTML; public $innerContent; public function __construct( $name, $attrs, $inner_blocks, $inner_html, $inner_content ) { $this->blockName = $name; $this->attrs = $attrs; $this->innerBlocks = $inner_blocks; $this->innerHTML = $inner_html; $this->innerContent = $inner_content; } } 
